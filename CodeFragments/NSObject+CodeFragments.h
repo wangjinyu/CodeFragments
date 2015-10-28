@@ -13,6 +13,7 @@ typedef struct{
     __unsafe_unretained NSString* filename;
     __unsafe_unretained NSString* directory;
     __unsafe_unretained NSString* syetemPath;
+    CGFloat   scale;
     
 }FileArguments;
 
@@ -45,5 +46,14 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  *  @return             包含系统目录的绝对路径
  */
 - (NSString*)absolutePath:(NSString*)relativePath systemPath:(NSString*)systemPath;
+
+/**
+ *  @brief 把一位的整数转换成两位的字符串（10进制字符串）
+ *
+ *  @param number 整数
+ *
+ *  @return 两位的字符串，在前边补0.
+ */
+- (NSString*)intToDobuleDigitString:(NSInteger)number;
 
 @end

@@ -49,4 +49,13 @@
  */
 - (BOOL)matchStringWithRegextes:(NSString*)regString;
 
+/**
+ *  @brief  将16进制字符串转换为NSData.
+ *
+ *  @return 16进制 data
+ */
+- (NSData*)hexData;
+- (NSString*)digitString:(NSInteger)digit;
+
++ (BOOL)isEmptyString:(NSString *)string;
 @end

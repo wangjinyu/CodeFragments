@@ -21,6 +21,21 @@
  */
 + (UIImage*)createRoundedRectImage:(UIImage*)image size:(CGSize)size radius:(NSInteger)r;
 
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (UIImage*)scaleToSize:(CGSize)size image:(UIImage*)image;
+
+/**
+ *  @brief 生成截图
+ *
+ *  @param view  要截图的view
+ *  @param size  要截取view上边图片的大小
+ *
+ *  @return      生成的截图
+ */
+
++ (UIImage*)screenShot:(UIView *)view size:(CGSize)size resultImage:(void (^)(UIImage* image))resultImage;
+
+//获取图片中某一点的颜色值
+
+- (UIColor *)colorAtPixel:(CGPoint)point;
 
 @end

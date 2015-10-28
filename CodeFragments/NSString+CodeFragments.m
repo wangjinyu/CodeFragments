@@ -28,6 +28,10 @@
 - (id)jsonvalue{
     NSData* data = [self dataUsingEncoding:NSUTF8StringEncoding];
     __autoreleasing NSError* error = nil;
+    if(!data){
+        NSLog(@"解析json字符串出错！");
+        return nil;
+    }
     id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     if(error){
         NSLog(@"解析json字符串出错！");
@@ -56,5 +60,55 @@
     BOOL result = [predicate evaluateWithObject:self];
     return result;
 }
+
+/**
+ *  @brief
+ *
+ *  @param string 要转化成 16 进制 data 的 16 进制字符串
+ *
+ *  @return 16进制 data
+ */
+- (NSData*)hexData{
+
+    NSMutableData* data = [NSMutableData data];
+    int idx;
+    for (idx = 0; idx + 2 <= self.length; idx+=2) {
+        NSRange range = NSMakeRange(idx, 2);
+        NSString* hexStr = [self substringWithRange:range];
+        NSScanner* scanner = [NSScanner scannerWithString:hexStr];
+        unsigned int intValue;
+        [scanner scanHexInt:&intValue];
+        [data appendBytes:&intValue length:1];
+    }
+    return data;
+}
+
+- (NSString*)digitString:(NSInteger)digit{
+    NSString* string = [self copy];
+    while (string.length < digit) {
+         string = [@"0" stringByAppendingString:string];
+    }
+    return string;
+}
+
++ (BOOL)isEmptyString:(NSString *)string{
+    
+    if(string == nil){
+        return YES;
+    }
+    if([string isKindOfClass:[[NSNull null] class]]){
+        return YES;
+    }
+    if([string isEqualToString:@""]){
+        return YES;
+    }
+    if([string isEqualToString:@"<null>"])
+        return YES;
+    if([string isEqualToString:@"(null)"])
+        return YES;
+    return NO;
+}
+
+
 
 @end

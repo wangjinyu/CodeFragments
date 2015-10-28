@@ -77,6 +77,8 @@ typedef NS_ENUM(NSInteger, ColorComparison) {
  */
 + (instancetype)colorFromHexString:(NSString *)hexString;
 
++ (instancetype)colorFromHexString:(NSString *)hexString alpha:(CGFloat)alpha;
+
 /**
  Creates a Color from an array of 4 NSNumbers (r,g,b,a)
  @param rgbaArray   4 NSNumbers for rgba between 0 - 1

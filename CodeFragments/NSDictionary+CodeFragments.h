@@ -11,7 +11,7 @@
 @interface NSDictionary (CodeFragments)
 
 /**
- *  @brief  把NSArray转为JSONString.
+ *  @brief  把NSDictionary转为JSONString.
  *
  *  @return json string
  */

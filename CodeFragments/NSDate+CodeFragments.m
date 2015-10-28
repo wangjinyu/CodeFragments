@@ -886,5 +886,10 @@ NSLocalizedStringFromTableInBundle(key, @"NSDateTimeAgo", [NSBundle bundleWithPa
     return @"";
 }
 
+- (NSString*)dateWithFormat:(NSString*)formatString{
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:formatString];
+    return [formatter stringFromDate:self];
+}
 
 @end
