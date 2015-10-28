@@ -49,7 +49,7 @@
  *  @return 两位的字符串，在前边补0.
  */
 - (NSString*)intToDobuleDigitString:(NSInteger)number{
-    NSString* string = [NSString stringWithFormat:@"%ld", number];
+    NSString* string = [NSString stringWithFormat:@"%ld", (long)number];
     while (string.length < 2) {
         string = [@"0" stringByAppendingString:string];
     }
