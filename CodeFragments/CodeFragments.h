@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DefineFragments.h"
 #import "NSDate+CodeFragments.h"
 #import "UIView+CodeFragments.h"
 #import "UIImage+CodeFragments.h"
