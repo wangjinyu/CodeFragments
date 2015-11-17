@@ -7,6 +7,7 @@
 //
 
 #import "DefineFragments.h"
+#import "NetworkManager.h"
 #import "NSDate+CodeFragments.h"
 #import "NSData+CodeFragments.h"
 #import "UIView+CodeFragments.h"
