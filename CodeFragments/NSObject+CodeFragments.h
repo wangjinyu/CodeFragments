@@ -56,4 +56,13 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  */
 - (NSString*)intToDobuleDigitString:(NSInteger)number;
 
+/**
+ *  @brief  浮点数转整数（4舍5入）
+ *
+ *  @param  aFloatValue 浮点数
+ *
+ *  @return 转换后的整数
+ */
+- (NSInteger)integerWithFloat:(CGFloat)aFloatValue;
+
 @end
