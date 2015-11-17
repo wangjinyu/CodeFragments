@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 s.name             = "CodeFragments"
 
-s.version          = "2.0.1"
+s.version          = "2.0.2"
 
 s.summary          = "iOS各种扩展"
 
@@ -21,6 +21,6 @@ s.requires_arc = true
 
 s.source_files = 'CodeFragments/*'
 
-s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit' 'SystemConfiguration'
+s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'SystemConfiguration'
 
 end
