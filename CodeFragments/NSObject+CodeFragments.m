@@ -37,6 +37,25 @@
     [data writeToFile:filePath atomically:YES];
     complete([NSString stringWithFormat:@"%@/%@", arguments.directory, arguments.filename], [NSString stringWithFormat:@"%@/%@/%@", arguments.syetemPath, arguments.directory, arguments.filename]);
 }
+
+
+/**
+ *  @brief 把数据保存到应用的沙盒中
+ *
+ *  @param image     要保存的图片
+ *  @param arguments 保存时的参数
+ *  @param complete  保存完成后的block，会包含图片的绝对路径(absolutePath)和相对路径(relativePath)
+ */
+- (void)writeData:(NSData*)data withFileArguments:(FileArguments)arguments complete:(SaveImageComplete)complete{
+    NSFileManager* defaultManager = [NSFileManager defaultManager];
+    [defaultManager createDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", arguments.syetemPath, arguments.directory] withIntermediateDirectories:NO attributes:nil error:nil];
+    
+    NSString* directoryPath = [arguments.syetemPath stringByAppendingPathComponent:arguments.directory];
+    NSString* filePath = [directoryPath stringByAppendingPathComponent:arguments.filename];
+    [data writeToFile:filePath atomically:YES];
+    complete([NSString stringWithFormat:@"%@/%@", arguments.directory, arguments.filename], [NSString stringWithFormat:@"%@/%@/%@", arguments.syetemPath, arguments.directory, arguments.filename]);    
+}
+
 - (NSString*)absolutePath:(NSString*)relativePath systemPath:(NSString*)systemPath{
     return [systemPath stringByAppendingPathComponent:relativePath];
 }
