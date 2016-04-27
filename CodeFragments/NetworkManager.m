@@ -71,13 +71,6 @@
     
     if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN){
         retVal = kNetWorkWWAN;
-        
-        
-        
-        
-        
-        
-        
     }
     return retVal;
 }
