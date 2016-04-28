@@ -77,7 +77,6 @@
 
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConnectionFlags flags, void* info){
     [(__bridge id)info performSelector:@selector(reachabilityChanged)];
-    
 }
 
 
@@ -90,8 +89,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     zeroAddress.sin_family = AF_INET;
     
     self.defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(nil, (struct sockaddr *)&zeroAddress);
-
-    
     SCNetworkReachabilityContext context = {0, (__bridge void*)self, NULL, NULL, NULL};
     
     if(SCNetworkReachabilitySetCallback(self.defaultRouteReachability, ReachabilityCallback, &context)){
@@ -103,14 +100,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
         }else{
             return YES;
         }
-    }
-    
-    NSLog(@"Error: Could not set reachability callback");
-    
-    
-    
-    
-    
+    }    
     SCNetworkReachabilitySetCallback(self.defaultRouteReachability, NULL, NULL);
     return NO;
 }

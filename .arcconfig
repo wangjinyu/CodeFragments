@@ -1,4 +1,5 @@
 {
 	"project_id":"CodeFragments",
-	"conduit_uri":"http://182.92.212.228:7878/"
+	"conduit_uri":"http://182.92.212.228:7878/",
+	"editor": "vim"
 }
