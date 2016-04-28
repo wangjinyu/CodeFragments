@@ -77,6 +77,9 @@
 
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConnectionFlags flags, void* info){
     [(__bridge id)info performSelector:@selector(reachabilityChanged)];
+    
+    
+    
 }
 
 
