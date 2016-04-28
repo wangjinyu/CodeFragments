@@ -78,8 +78,6 @@
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConnectionFlags flags, void* info){
     [(__bridge id)info performSelector:@selector(reachabilityChanged)];
     
-    
-    
 }
 
 
@@ -108,6 +106,11 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     }
     
     NSLog(@"Error: Could not set reachability callback");
+    
+    
+    
+    
+    
     SCNetworkReachabilitySetCallback(self.defaultRouteReachability, NULL, NULL);
     return NO;
 }
