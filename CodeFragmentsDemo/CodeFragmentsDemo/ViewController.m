@@ -17,13 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [PHPhotoLibrary saveImage:[UIImage imageNamed:@"Image"] toAlbum:@"测试4" withCompletionBlock:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

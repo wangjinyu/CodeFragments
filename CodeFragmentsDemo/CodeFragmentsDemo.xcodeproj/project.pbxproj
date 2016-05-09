@@ -135,7 +135,6 @@
 				717E05801BFB2B42005CDC8B /* NSData+CodeFragments.m */,
 				717E05811BFB2B42005CDC8B /* NSDate+CodeFragments.h */,
 				717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */,
-				717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */,
 				717E05841BFB2B42005CDC8B /* NSDictionary+CodeFragments.h */,
 				717E05851BFB2B42005CDC8B /* NSDictionary+CodeFragments.m */,
 				717E05861BFB2B42005CDC8B /* NSObject+CodeFragments.h */,
@@ -150,6 +149,7 @@
 				717E058F1BFB2B42005CDC8B /* UIImage+CodeFragments.m */,
 				717E05901BFB2B42005CDC8B /* UIView+CodeFragments.h */,
 				717E05911BFB2B42005CDC8B /* UIView+CodeFragments.m */,
+				717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */,
 			);
 			name = CodeFragments;
 			path = ../../CodeFragments;
