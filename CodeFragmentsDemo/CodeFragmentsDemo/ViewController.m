@@ -17,13 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"==%ld", [NetworkManager getNetworkTypeWithNetworkChangedBlock:nil]);
     
-    NetWorkType type = [NetworkManager getNetworkTypeWithNetworkChangedBlock:^(NetWorkType networkType) {
-        NSLog(@"**%ld", networkType)
-    }];
-    
-    NSLog(@"--%ld", type);
+    [PHPhotoLibrary saveImage:[UIImage imageNamed:@"Image"] toAlbum:@"测试4" withCompletionBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning {

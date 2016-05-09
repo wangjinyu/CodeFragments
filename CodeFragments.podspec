@@ -2,12 +2,12 @@ Pod::Spec.new do |s|
 
 s.name             = "CodeFragments"
 
-s.version          = "2.0.5"
+s.version          = "3.0.0"
 
 s.summary          = "iOS各种扩展"
 
 s.description      = <<-DESC
- "常用的iOS类目整理"
+ "1.用 Photos 框架替代原来的 AssetsLibrary库"
 DESC
 
 s.homepage         = "https://github.com/wangjinyu/CodeFragments"
@@ -15,12 +15,12 @@ s.license          = 'MIT'
 s.author           = { "王金宇" => "jinyuid@gmail.com" }
 
 s.source           = { :git => "https://github.com/wangjinyu/CodeFragments.git", :tag => s.version.to_s }
-s.platform     = :ios, '7.0'
+s.platform     = :ios, '8.0'
 
 s.requires_arc = true
 
 s.source_files = 'CodeFragments/*'
 
-s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'SystemConfiguration', 'Accelerate'
+s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'SystemConfiguration', 'Accelerate', 'Photos', 'PhotosUI'
 
 end

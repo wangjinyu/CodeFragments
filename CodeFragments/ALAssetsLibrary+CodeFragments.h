@@ -7,9 +7,10 @@
 //
 
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <Photos/Photos.h>
+#import <PhotosUI/PhotosUI.h>
+typedef void (^SaveImageCompletion) (NSError* error, BOOL successed, NSString* message);
 
-typedef void (^SaveImageCompletion) (NSError* error);
-
-@interface ALAssetsLibrary (CodeFragments)
--(void)addAssetURL:(NSURL*)assetURL toAlbum:(NSString*)albumName withCompletionBlock:(SaveImageCompletion)completionBlock;
+@interface PHPhotoLibrary (CodeFragments)
++ (void)saveImage:(UIImage*)image toAlbum:(NSString*)albumName withCompletionBlock:(SaveImageCompletion)completionBlock;
 @end
