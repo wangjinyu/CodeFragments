@@ -25,13 +25,6 @@
 - (id)jsonvalue;
 
 /**
- *  @brief  判断字符串是否为空
- *
- *  @return YES:空字符串， NO:非空字符串.
- */
-- (BOOL)isEmpty;
-
-/**
  *  @brief 判断NSString是否包含另一个字符串
  *
  *  @param subString 子字符串
@@ -49,13 +42,17 @@
  */
 - (BOOL)matchStringWithRegextes:(NSString*)regString;
 
-/**
- *  @brief  将16进制字符串转换为NSData.
- *
- *  @return 16进制 data
+/*!
+ @author 王金宇, 16-05-09 16:05:21
+ 
+ @brief 判断一个字符串是否为空字符串
+ 
+ @param string 要判断的字符串
+ 
+ @return 判断结果
+ 
+ @since 3.0
  */
-- (NSData*)hexData;
-- (NSString*)digitString:(NSInteger)digit;
-
 + (BOOL)isEmptyString:(NSString *)string;
+
 @end

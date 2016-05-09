@@ -39,12 +39,6 @@
     return result;
 }
 
-- (BOOL)isEmpty{
-    if(self.length <= 0 || self == (id)[NSNull null] || [self isKindOfClass:[[NSNull null] class]] || self == nil)
-        return YES;
-    return NO;
-}
-
 - (BOOL)stringContainsSubString:(NSString *)subString {
     NSRange aRange = [self rangeOfString:subString];
     if (aRange.location == NSNotFound) {
@@ -61,36 +55,17 @@
     return result;
 }
 
-/**
- *  @brief
- *
- *  @param string 要转化成 16 进制 data 的 16 进制字符串
- *
- *  @return 16进制 data
+/*!
+ @author 王金宇, 16-05-09 16:05:21
+ 
+ @brief 判断一个字符串是否为空字符串
+ 
+ @param string 要判断的字符串
+ 
+ @return 判断结果
+ 
+ @since 3.0
  */
-- (NSData*)hexData{
-
-    NSMutableData* data = [NSMutableData data];
-    int idx;
-    for (idx = 0; idx + 2 <= self.length; idx+=2) {
-        NSRange range = NSMakeRange(idx, 2);
-        NSString* hexStr = [self substringWithRange:range];
-        NSScanner* scanner = [NSScanner scannerWithString:hexStr];
-        unsigned int intValue;
-        [scanner scanHexInt:&intValue];
-        [data appendBytes:&intValue length:1];
-    }
-    return data;
-}
-
-- (NSString*)digitString:(NSInteger)digit{
-    NSString* string = [self copy];
-    while (string.length < digit) {
-         string = [@"0" stringByAppendingString:string];
-    }
-    return string;
-}
-
 + (BOOL)isEmptyString:(NSString *)string{
     
     if(string == nil){
@@ -102,10 +77,12 @@
     if([string isEqualToString:@""]){
         return YES;
     }
-    if([string isEqualToString:@"<null>"])
+    if([string isEqualToString:@"<null>"]){
         return YES;
-    if([string isEqualToString:@"(null)"])
+    }
+    if([string isEqualToString:@"(null)"]){
         return YES;
+    }
     return NO;
 }
 

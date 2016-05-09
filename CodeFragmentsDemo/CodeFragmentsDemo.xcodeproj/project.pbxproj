@@ -15,13 +15,11 @@
 		717E05431BFAED4D005CDC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717E05411BFAED4D005CDC8B /* LaunchScreen.storyboard */; };
 		717E05921BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057A1BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m */; };
 		717E05931BFB2B42005CDC8B /* NSArray+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */; };
-		717E05941BFB2B42005CDC8B /* NSData+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05801BFB2B42005CDC8B /* NSData+CodeFragments.m */; };
 		717E05951BFB2B42005CDC8B /* NSDate+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */; };
 		717E05961BFB2B42005CDC8B /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */; };
 		717E05971BFB2B42005CDC8B /* NSDictionary+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05851BFB2B42005CDC8B /* NSDictionary+CodeFragments.m */; };
 		717E05981BFB2B42005CDC8B /* NSObject+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05871BFB2B42005CDC8B /* NSObject+CodeFragments.m */; };
 		717E05991BFB2B42005CDC8B /* NSString+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05891BFB2B42005CDC8B /* NSString+CodeFragments.m */; };
-		717E059A1BFB2B42005CDC8B /* NSTimer+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E058B1BFB2B42005CDC8B /* NSTimer+CodeFragments.m */; };
 		717E059B1BFB2B42005CDC8B /* UIColor+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E058D1BFB2B42005CDC8B /* UIColor+CodeFragments.m */; };
 		717E059C1BFB2B42005CDC8B /* UIImage+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E058F1BFB2B42005CDC8B /* UIImage+CodeFragments.m */; };
 		717E059D1BFB2B42005CDC8B /* UIView+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05911BFB2B42005CDC8B /* UIView+CodeFragments.m */; };
@@ -45,8 +43,6 @@
 		717E057C1BFB2B42005CDC8B /* DefineFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineFragments.h; sourceTree = "<group>"; };
 		717E057D1BFB2B42005CDC8B /* NSArray+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CodeFragments.h"; sourceTree = "<group>"; };
 		717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CodeFragments.m"; sourceTree = "<group>"; };
-		717E057F1BFB2B42005CDC8B /* NSData+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CodeFragments.h"; sourceTree = "<group>"; };
-		717E05801BFB2B42005CDC8B /* NSData+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CodeFragments.m"; sourceTree = "<group>"; };
 		717E05811BFB2B42005CDC8B /* NSDate+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CodeFragments.h"; sourceTree = "<group>"; };
 		717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CodeFragments.m"; sourceTree = "<group>"; };
 		717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
@@ -56,8 +52,6 @@
 		717E05871BFB2B42005CDC8B /* NSObject+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CodeFragments.m"; sourceTree = "<group>"; };
 		717E05881BFB2B42005CDC8B /* NSString+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CodeFragments.h"; sourceTree = "<group>"; };
 		717E05891BFB2B42005CDC8B /* NSString+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CodeFragments.m"; sourceTree = "<group>"; };
-		717E058A1BFB2B42005CDC8B /* NSTimer+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CodeFragments.h"; sourceTree = "<group>"; };
-		717E058B1BFB2B42005CDC8B /* NSTimer+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CodeFragments.m"; sourceTree = "<group>"; };
 		717E058C1BFB2B42005CDC8B /* UIColor+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CodeFragments.h"; sourceTree = "<group>"; };
 		717E058D1BFB2B42005CDC8B /* UIColor+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CodeFragments.m"; sourceTree = "<group>"; };
 		717E058E1BFB2B42005CDC8B /* UIImage+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CodeFragments.h"; sourceTree = "<group>"; };
@@ -131,8 +125,6 @@
 				717E057C1BFB2B42005CDC8B /* DefineFragments.h */,
 				717E057D1BFB2B42005CDC8B /* NSArray+CodeFragments.h */,
 				717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */,
-				717E057F1BFB2B42005CDC8B /* NSData+CodeFragments.h */,
-				717E05801BFB2B42005CDC8B /* NSData+CodeFragments.m */,
 				717E05811BFB2B42005CDC8B /* NSDate+CodeFragments.h */,
 				717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */,
 				717E05841BFB2B42005CDC8B /* NSDictionary+CodeFragments.h */,
@@ -141,8 +133,6 @@
 				717E05871BFB2B42005CDC8B /* NSObject+CodeFragments.m */,
 				717E05881BFB2B42005CDC8B /* NSString+CodeFragments.h */,
 				717E05891BFB2B42005CDC8B /* NSString+CodeFragments.m */,
-				717E058A1BFB2B42005CDC8B /* NSTimer+CodeFragments.h */,
-				717E058B1BFB2B42005CDC8B /* NSTimer+CodeFragments.m */,
 				717E058C1BFB2B42005CDC8B /* UIColor+CodeFragments.h */,
 				717E058D1BFB2B42005CDC8B /* UIColor+CodeFragments.m */,
 				717E058E1BFB2B42005CDC8B /* UIImage+CodeFragments.h */,
@@ -230,8 +220,6 @@
 				717E05951BFB2B42005CDC8B /* NSDate+CodeFragments.m in Sources */,
 				717E05921BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m in Sources */,
 				717E05991BFB2B42005CDC8B /* NSString+CodeFragments.m in Sources */,
-				717E05941BFB2B42005CDC8B /* NSData+CodeFragments.m in Sources */,
-				717E059A1BFB2B42005CDC8B /* NSTimer+CodeFragments.m in Sources */,
 				717E05971BFB2B42005CDC8B /* NSDictionary+CodeFragments.m in Sources */,
 				717E059D1BFB2B42005CDC8B /* UIView+CodeFragments.m in Sources */,
 				717E05981BFB2B42005CDC8B /* NSObject+CodeFragments.m in Sources */,

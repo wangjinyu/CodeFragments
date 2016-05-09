@@ -57,22 +57,4 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  */
 - (NSString*)absolutePath:(NSString*)relativePath systemPath:(NSString*)systemPath;
 
-/**
- *  @brief 把一位的整数转换成两位的字符串（10进制字符串）
- *
- *  @param number 整数
- *
- *  @return 两位的字符串，在前边补0.
- */
-- (NSString*)intToDobuleDigitString:(NSInteger)number;
-
-/**
- *  @brief  浮点数转整数（4舍5入）
- *
- *  @param  aFloatValue 浮点数
- *
- *  @return 转换后的整数
- */
-- (NSInteger)integerWithFloat:(CGFloat)aFloatValue;
-
 @end
