@@ -46,13 +46,9 @@
     SCNetworkReachabilityGetFlags(reachability, &flags);
     
     if(response != nil){
-        NSLog(@"start network changed notification");
         [NetworkManager defaultManager].networkChangedBlock = response;
         [[NetworkManager defaultManager] startNotifierNetworkChanged];
-    }else{
-        NSLog(@"get network without notification");
-    }
-    
+    }    
     if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)  {
         return kNetWorkInvalid;
     }
