@@ -13,7 +13,7 @@
 		717E053E1BFAED4D005CDC8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717E053C1BFAED4D005CDC8B /* Main.storyboard */; };
 		717E05401BFAED4D005CDC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717E053F1BFAED4D005CDC8B /* Assets.xcassets */; };
 		717E05431BFAED4D005CDC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717E05411BFAED4D005CDC8B /* LaunchScreen.storyboard */; };
-		717E05921BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057A1BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m */; };
+		717E05921BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057A1BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m */; };
 		717E05931BFB2B42005CDC8B /* NSArray+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */; };
 		717E05951BFB2B42005CDC8B /* NSDate+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */; };
 		717E05961BFB2B42005CDC8B /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */; };
@@ -37,8 +37,8 @@
 		717E053F1BFAED4D005CDC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		717E05421BFAED4D005CDC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		717E05441BFAED4D005CDC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		717E05791BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CodeFragments.h"; sourceTree = "<group>"; };
-		717E057A1BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CodeFragments.m"; sourceTree = "<group>"; };
+		717E05791BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+CodeFragments.h"; sourceTree = "<group>"; };
+		717E057A1BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+CodeFragments.m"; sourceTree = "<group>"; };
 		717E057B1BFB2B42005CDC8B /* CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeFragments.h; sourceTree = "<group>"; };
 		717E057C1BFB2B42005CDC8B /* DefineFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineFragments.h; sourceTree = "<group>"; };
 		717E057D1BFB2B42005CDC8B /* NSArray+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CodeFragments.h"; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 			children = (
 				717E059E1BFB2B53005CDC8B /* NetworkManager.h */,
 				717E059F1BFB2B53005CDC8B /* NetworkManager.m */,
-				717E05791BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.h */,
-				717E057A1BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m */,
+				717E05791BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.h */,
+				717E057A1BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m */,
 				717E057B1BFB2B42005CDC8B /* CodeFragments.h */,
 				717E057C1BFB2B42005CDC8B /* DefineFragments.h */,
 				717E057D1BFB2B42005CDC8B /* NSArray+CodeFragments.h */,
@@ -218,7 +218,7 @@
 			files = (
 				717E059C1BFB2B42005CDC8B /* UIImage+CodeFragments.m in Sources */,
 				717E05951BFB2B42005CDC8B /* NSDate+CodeFragments.m in Sources */,
-				717E05921BFB2B42005CDC8B /* ALAssetsLibrary+CodeFragments.m in Sources */,
+				717E05921BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m in Sources */,
 				717E05991BFB2B42005CDC8B /* NSString+CodeFragments.m in Sources */,
 				717E05971BFB2B42005CDC8B /* NSDictionary+CodeFragments.m in Sources */,
 				717E059D1BFB2B42005CDC8B /* UIView+CodeFragments.m in Sources */,

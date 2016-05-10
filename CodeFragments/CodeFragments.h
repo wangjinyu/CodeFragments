@@ -16,7 +16,7 @@
 #import "NSObject+CodeFragments.h"
 #import "NSString+CodeFragments.h"
 #import "NSDictionary+CodeFragments.h"
-#import "ALAssetsLibrary+CodeFragments.h"
+#import "PHPhotoLibrary+CodeFragments.h"
 
 
 

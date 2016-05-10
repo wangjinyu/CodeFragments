@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Vodka Inc. All rights reserved.
 //
 
-#import "ALAssetsLibrary+CodeFragments.h"
+#import "PHPhotoLibrary+CodeFragments.h"
 #import "NSString+CodeFragments.h"
 
 @implementation PHPhotoLibrary (CodeFragments)
