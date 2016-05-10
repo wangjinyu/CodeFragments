@@ -57,4 +57,34 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  */
 - (NSString*)absolutePath:(NSString*)relativePath systemPath:(NSString*)systemPath;
 
+
+/*!
+ @author 王金宇, 16-05-10 14:05:14
+ 
+ @brief 在一个View中获取某个ViewController
+ 
+ @param aView view
+ 
+ @param aClassName : 要获取的ViewController类名称
+ 
+ @return ViewController
+ 
+ @since 3.0
+ */
+- (UIViewController*)getViewControllerForUIView:(UIView*)aView aViewControllerClass:(NSString*)aClassName;
+
+/*!
+ @author 王金宇, 16-05-10 14:05:23
+ 
+ @brief 在一个ViewController中获取另一个ViewController类
+ 
+ @param aViewController 当前UIViewController
+ @param aClassName      要获取的ViewController类名称
+ 
+ @return 获取到的viewController
+ 
+ @since 3.0
+ */
+- (UIViewController*)getViewControllerForUIViewController:(UIViewController*)aViewController aViewControllerClass:(NSString*)aClassName;
+
 @end

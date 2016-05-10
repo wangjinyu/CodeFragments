@@ -55,4 +55,15 @@
  */
 + (BOOL)isEmptyString:(NSString *)string;
 
+/*!
+ @author 王金宇, 16-05-10 15:05:18
+ 
+ @brief 判断字符串是否含有Emoji表情
+ 
+ @return YES:含有Emoji, NO:不含有Emoji
+ 
+ @since 3.0
+ */
+- (BOOL)containsEmojiString;
+
 @end
