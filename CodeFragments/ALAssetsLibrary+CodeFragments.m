@@ -43,6 +43,9 @@
     
     
     [self authorization:^(BOOL authrization) {
+        if(authrization == NO){
+            return ;
+        }
         __block PHAssetCollection   *collection;
         __block PHObjectPlaceholder *placeHolder;
         
@@ -100,5 +103,54 @@
         }
     }];
 }
+
+/*!
+ @author 王金宇, 16-05-10 15:05:44
+ 
+ @brief 获取相册中所有照片
+ 
+ @return UIImage 合集
+ 
+ @since 3.0
+ */
++ (NSArray*)getAllPhotoLibraryPhotos{
+    PHFetchOptions *options = [[PHFetchOptions alloc] init];
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+    
+    PHFetchResult   *result = [PHAsset fetchAssetsWithOptions:options];
+    
+    for (PHAsset *asset in result) {
+        NSLog(@" date = %@, location = %@", asset.creationDate, asset.location);
+    }
+    return nil;
+}
+
++ (NSArray*)getPhtotsBetweenDate:(NSDate*)startDate andDate:(NSDate*)endDate{
+    NSMutableArray* photos = [[NSMutableArray alloc] init];
+            
+    NSArray* allAssets = [self getAllPhotoLibraryPhotos];
+    for (PHAsset *asset in allAssets) {
+        if([asset.creationDate earlierDate:endDate] && [asset.creationDate laterDate:startDate]){
+            [photos addObject:asset];
+        }
+    }
+    return photos;
+}
+
++ (PHAsset*)getLastPhotoInPhtots{
+    NSArray* allAssets = [self getAllPhotoLibraryPhotos];
+    return allAssets.lastObject;
+}
+
++ (void)getImageInAsset:(PHAsset*)asset size:(CGSize)aSize result:(void (^) (UIImage* image, NSDictionary* info))resultBlock{
+    PHImageRequestOptions *imageRequestOptions = [[PHImageRequestOptions alloc] init];
+    imageRequestOptions.resizeMode = PHImageRequestOptionsResizeModeExact;
+    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:aSize contentMode:PHImageContentModeAspectFit options:imageRequestOptions resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        resultBlock(result, info);
+    }];
+}
+
+
+
 
 @end
