@@ -74,7 +74,7 @@ typedef void (^SaveImageCompletion) (NSError* error, BOOL successed, NSString* m
  @brief 通过PHAsset对象获取图片
  
  @param asset       PHAsset对象
- @param aSize       要获取图片的缩略图大小，如果要获取原图, 传入PHImageManagerMaximumSize
+ @param aSize       要获取图片的缩略图大小(像素值，不是DP值)，如果要获取原图, 传入PHImageManagerMaximumSize
  @param resultBlock 返回的UIImage和info
  
  @since 3.0

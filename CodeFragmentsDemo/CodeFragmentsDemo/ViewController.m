@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [PHPhotoLibrary getAllPhotoLibraryPhotos];
 }
 
 @end

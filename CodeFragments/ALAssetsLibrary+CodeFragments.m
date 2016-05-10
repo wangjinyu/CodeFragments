@@ -118,11 +118,11 @@
     options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
     
     PHFetchResult   *result = [PHAsset fetchAssetsWithOptions:options];
-    
+    NSMutableArray* allAssets = [[NSMutableArray alloc] init];
     for (PHAsset *asset in result) {
-        NSLog(@" date = %@, location = %@", asset.creationDate, asset.location);
+        [allAssets addObject:asset];
     }
-    return nil;
+    return allAssets;
 }
 
 + (NSArray*)getPhtotsBetweenDate:(NSDate*)startDate andDate:(NSDate*)endDate{
