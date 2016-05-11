@@ -11,6 +11,7 @@
 #import "NSDate+CodeFragments.h"
 #import "UIView+CodeFragments.h"
 #import "UIImage+CodeFragments.h"
+#import "NSTimer+CodeFragments.h"
 #import "NSArray+CodeFragments.h"
 #import "UIColor+CodeFragments.h"
 #import "NSObject+CodeFragments.h"
