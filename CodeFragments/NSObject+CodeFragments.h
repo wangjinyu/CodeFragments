@@ -57,6 +57,15 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  */
 - (NSString*)absolutePath:(NSString*)relativePath systemPath:(NSString*)systemPath;
 
+/**
+ *  @brief  浮点数转整数（4舍5入）
+ *
+ *  @param  aFloatValue 浮点数
+ *
+ *  @return 转换后的整数
+ */
+- (NSInteger)integerWithFloat:(CGFloat)aFloatValue;
+
 
 /*!
  @author 王金宇, 16-05-10 14:05:14

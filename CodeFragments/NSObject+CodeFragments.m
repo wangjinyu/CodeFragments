@@ -60,6 +60,25 @@
     return [systemPath stringByAppendingPathComponent:relativePath];
 }
 
+/**
+ *  @brief  浮点数转整数（4舍5入）
+ *
+ *  @param  aFloatValue 浮点数
+ *
+ *  @return 转换后的整数
+ */
+- (NSInteger)integerWithFloat:(CGFloat)aFloatValue {
+    NSInteger i = 0;
+    if(aFloatValue > 0) //正数
+        i = (aFloatValue * 10 + 5) / 10;
+    else if(aFloatValue < 0) //负数
+        i = (aFloatValue * 10 - 5) / 10;
+    else i = 0;
+    
+    return i;
+}
+
+
 /*!
  @author 王金宇, 16-05-10 14:05:14
  
