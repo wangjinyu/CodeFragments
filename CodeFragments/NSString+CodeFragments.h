@@ -66,4 +66,15 @@
  */
 - (BOOL)containsEmojiString;
 
+/*!
+ @author 王金宇, 16-05-31 14:05:22
+ 
+ @brief 去除掉字符串中的所有空格
+ 
+ @return 去除空格以后的字符串
+ 
+ @since 3.0
+ */
+- (NSString *)removeAllBlank;
+
 @end

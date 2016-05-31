@@ -28,6 +28,7 @@
  */
 #define SCREEN_W        ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_H        ([UIScreen mainScreen].bounds.size.height)
+#define SCREEN_SCALE    ([UIScreen mainScreen].scale)
 
 // App 版本号.
 #define APP_VERSION         [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
@@ -65,7 +66,38 @@
  */
 #define SYSTEM_LIBIARY_PATH      NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]
 
-#define WEAK(object)     __weak typeof(object)
+
+/*!
+ @author 王金宇, 16-05-31 12:05:11
+ 
+ @brief 初始化字体
+ 
+ @param fontName 字体名称
+ @param fontSize 字体大小
+ 
+ @return UIFont
+ 
+ @since 3.0
+ */
+#define FONT_NAME_SIZE(fontName, fontSize) [UIFont fontWithName:fontName size:fontSize]
+
+/*!
+ @author 王金宇, 16-05-31 12:05:59
+ 
+ @brief 安全获取NSString
+ 
+ @param presence NSDictionary
+ @param key      字典 key
+ 
+ @since 3.0
+ */
+#define SAFE_GET_STRING(presence, key) \
+([presence objectForKey: key] != nil && [presence objectForKey: key] != [NSNull null]) && [[presence objectForKey: key] isKindOfClass:[NSString class]] && ![[presence objectForKey: key] isEqualToString:@"null"] && ![[presence objectForKey: key] isEqualToString:@"<null>"] ? [presence objectForKey: key] : @"" \
+
+#define CHECK_STRING_SAFE(val) val != nil ? [NSString stringWithFormat: @"%@", val]  : @"" \
+
+#define SAFE_GET_NUMBER(presence, key)  \
+([presence objectForKey: key] != nil && [presence objectForKey: key] != [NSNull null]) ? [presence objectForKey: key] : @0 \
 
 
     //单例化一个类 instanceMothed:单例的方法名称

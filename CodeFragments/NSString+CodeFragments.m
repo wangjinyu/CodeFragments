@@ -125,4 +125,9 @@
     return returnValue;
 }
 
+- (NSString *)removeAllBlank{
+    NSString *resultString = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+    return resultString;
+}
+
 @end
