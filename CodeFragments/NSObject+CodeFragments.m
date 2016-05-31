@@ -27,15 +27,15 @@
 }
 
 
-- (void)writeImage:(UIImage *)image withFileArguments:(FileArguments)arguments complete:(SaveImageComplete)complete{
+- (void)writeImage:(UIImage *)image withFileArguments:(FileArguments*)arguments complete:(SaveImageComplete)complete{
     NSFileManager* defaultManager = [NSFileManager defaultManager];
-    [defaultManager createDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", arguments.syetemPath, arguments.directory] withIntermediateDirectories:NO attributes:nil error:nil];
+    [defaultManager createDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", arguments.systemPath, arguments.directory] withIntermediateDirectories:NO attributes:nil error:nil];
     
-    NSString* directoryPath = [arguments.syetemPath stringByAppendingPathComponent:arguments.directory];
+    NSString* directoryPath = [arguments.systemPath stringByAppendingPathComponent:arguments.directory];
     NSString* filePath = [directoryPath stringByAppendingPathComponent:arguments.filename];
     NSData* data = UIImageJPEGRepresentation(image, arguments.scale);
     [data writeToFile:filePath atomically:YES];
-    complete([NSString stringWithFormat:@"%@/%@", arguments.directory, arguments.filename], [NSString stringWithFormat:@"%@/%@/%@", arguments.syetemPath, arguments.directory, arguments.filename]);
+    complete([NSString stringWithFormat:@"%@/%@", arguments.directory, arguments.filename], [NSString stringWithFormat:@"%@/%@/%@", arguments.systemPath, arguments.directory, arguments.filename]);
 }
 
 
@@ -46,14 +46,14 @@
  *  @param arguments 保存时的参数
  *  @param complete  保存完成后的block，会包含图片的绝对路径(absolutePath)和相对路径(relativePath)
  */
-- (void)writeData:(NSData*)data withFileArguments:(FileArguments)arguments complete:(SaveImageComplete)complete{
+- (void)writeData:(NSData*)data withFileArguments:(FileArguments*)arguments complete:(SaveImageComplete)complete{
     NSFileManager* defaultManager = [NSFileManager defaultManager];
-    [defaultManager createDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", arguments.syetemPath, arguments.directory] withIntermediateDirectories:NO attributes:nil error:nil];
+    [defaultManager createDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", arguments.systemPath, arguments.directory] withIntermediateDirectories:NO attributes:nil error:nil];
     
-    NSString* directoryPath = [arguments.syetemPath stringByAppendingPathComponent:arguments.directory];
+    NSString* directoryPath = [arguments.systemPath stringByAppendingPathComponent:arguments.directory];
     NSString* filePath = [directoryPath stringByAppendingPathComponent:arguments.filename];
     [data writeToFile:filePath atomically:YES];
-    complete([NSString stringWithFormat:@"%@/%@", arguments.directory, arguments.filename], [NSString stringWithFormat:@"%@/%@/%@", arguments.syetemPath, arguments.directory, arguments.filename]);    
+    complete([NSString stringWithFormat:@"%@/%@", arguments.directory, arguments.filename], [NSString stringWithFormat:@"%@/%@/%@", arguments.systemPath, arguments.directory, arguments.filename]);    
 }
 
 - (NSString*)absolutePath:(NSString*)relativePath systemPath:(NSString*)systemPath{
@@ -77,7 +77,6 @@
     
     return i;
 }
-
 
 /*!
  @author 王金宇, 16-05-10 14:05:14
@@ -124,5 +123,10 @@
     }
     return nil;
 }
+
+@end
+
+@implementation FileArguments
+
 
 @end

@@ -16,7 +16,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];   
+    NSLog(@"%@", APP_BUNDLE_IDENTIFIER);
 }
 
 @end

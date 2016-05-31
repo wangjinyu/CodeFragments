@@ -14,12 +14,46 @@
  */
 
 #ifdef DEBUG
-//    #define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-
-    #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+    #define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
     #define NSLog(...)
 #endif
+
+/*!
+ @author 王金宇, 16-05-31 11:05:43
+ 
+ @brief 获取屏幕的宽度和高度
+ 
+ @since 3.0
+ */
+#define SCREEN_W        ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_H        ([UIScreen mainScreen].bounds.size.height)
+
+// App 版本号.
+#define APP_VERSION         [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+// App构建版本号
+#define APP_BUILD_VERSION   [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+
+/*!
+ @author 王金宇, 16-05-31 11:05:34
+ 
+ @brief 获取 App Bundle identifier
+ 
+ @since 3.0
+ */
+
+#define APP_BUNDLE_IDENTIFIER   [[NSBundle mainBundle] bundleIdentifier]
+
+/*!
+ @author 王金宇, 16-05-31 11:05:05
+ 
+ @brief 系统版本号
+ 
+ @since 3.0
+ */
+#define SYSTEM_VERSION_STRING       [[UIDevice currentDevice] systemVersion]
+#define SYSTEM_VERSION_FLOAT        [[[UIDevice currentDevice] systemVersion] floatValue]
 
 /**
  *  @brief  iOS 系统 Document 目录宏定义

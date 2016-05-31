@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef struct{
-    __unsafe_unretained NSString* filename;
-    __unsafe_unretained NSString* directory;
-    __unsafe_unretained NSString* syetemPath;
-    CGFloat   scale;
-    
-}FileArguments;
+@interface FileArguments : NSObject
+
+@property(nonatomic, strong)NSString    *filename;
+@property(nonatomic, strong)NSString    *directory;
+@property(nonatomic, strong)NSString    *systemPath;
+@property(nonatomic, assign)float       scale;
+
+@end
 
 typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePath);
 
@@ -35,7 +36,7 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  *  @param arguments 保存时的参数
  *  @param complete  保存完成后的block，会包含图片的绝对路径(absolutePath)和相对路径(relativePath)
  */
-- (void)writeImage:(UIImage*)image withFileArguments:(FileArguments)arguments complete:(SaveImageComplete)complete;
+- (void)writeImage:(UIImage*)image withFileArguments:(FileArguments*)arguments complete:(SaveImageComplete)complete;
 
 /**
  *  @brief 把数据保存到应用的沙盒中
@@ -44,7 +45,7 @@ typedef void (^SaveImageComplete) (NSString* relativePath, NSString* absolutePat
  *  @param arguments 保存时的参数
  *  @param complete  保存完成后的block，会包含图片的绝对路径(absolutePath)和相对路径(relativePath)
  */
-- (void)writeData:(NSData*)data withFileArguments:(FileArguments)arguments complete:(SaveImageComplete)complete;
+- (void)writeData:(NSData*)data withFileArguments:(FileArguments*)arguments complete:(SaveImageComplete)complete;
 
 
 /**

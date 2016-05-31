@@ -16,7 +16,6 @@
 		717E05921BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057A1BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m */; };
 		717E05931BFB2B42005CDC8B /* NSArray+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */; };
 		717E05951BFB2B42005CDC8B /* NSDate+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */; };
-		717E05961BFB2B42005CDC8B /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */; };
 		717E05971BFB2B42005CDC8B /* NSDictionary+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05851BFB2B42005CDC8B /* NSDictionary+CodeFragments.m */; };
 		717E05981BFB2B42005CDC8B /* NSObject+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05871BFB2B42005CDC8B /* NSObject+CodeFragments.m */; };
 		717E05991BFB2B42005CDC8B /* NSString+CodeFragments.m in Sources */ = {isa = PBXBuildFile; fileRef = 717E05891BFB2B42005CDC8B /* NSString+CodeFragments.m */; };
@@ -45,7 +44,6 @@
 		717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CodeFragments.m"; sourceTree = "<group>"; };
 		717E05811BFB2B42005CDC8B /* NSDate+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CodeFragments.h"; sourceTree = "<group>"; };
 		717E05821BFB2B42005CDC8B /* NSDate+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CodeFragments.m"; sourceTree = "<group>"; };
-		717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
 		717E05841BFB2B42005CDC8B /* NSDictionary+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CodeFragments.h"; sourceTree = "<group>"; };
 		717E05851BFB2B42005CDC8B /* NSDictionary+CodeFragments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CodeFragments.m"; sourceTree = "<group>"; };
 		717E05861BFB2B42005CDC8B /* NSObject+CodeFragments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CodeFragments.h"; sourceTree = "<group>"; };
@@ -117,12 +115,12 @@
 		717E05781BFB2B42005CDC8B /* CodeFragments */ = {
 			isa = PBXGroup;
 			children = (
+				717E057B1BFB2B42005CDC8B /* CodeFragments.h */,
+				717E057C1BFB2B42005CDC8B /* DefineFragments.h */,
 				717E059E1BFB2B53005CDC8B /* NetworkManager.h */,
 				717E059F1BFB2B53005CDC8B /* NetworkManager.m */,
 				717E05791BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.h */,
 				717E057A1BFB2B42005CDC8B /* PHPhotoLibrary+CodeFragments.m */,
-				717E057B1BFB2B42005CDC8B /* CodeFragments.h */,
-				717E057C1BFB2B42005CDC8B /* DefineFragments.h */,
 				717E057D1BFB2B42005CDC8B /* NSArray+CodeFragments.h */,
 				717E057E1BFB2B42005CDC8B /* NSArray+CodeFragments.m */,
 				717E05811BFB2B42005CDC8B /* NSDate+CodeFragments.h */,
@@ -139,7 +137,6 @@
 				717E058F1BFB2B42005CDC8B /* UIImage+CodeFragments.m */,
 				717E05901BFB2B42005CDC8B /* UIView+CodeFragments.h */,
 				717E05911BFB2B42005CDC8B /* UIView+CodeFragments.m */,
-				717E05831BFB2B42005CDC8B /* NSDateTimeAgo.bundle */,
 			);
 			name = CodeFragments;
 			path = ../../CodeFragments;
@@ -203,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				717E05431BFAED4D005CDC8B /* LaunchScreen.storyboard in Resources */,
-				717E05961BFB2B42005CDC8B /* NSDateTimeAgo.bundle in Resources */,
 				717E05401BFAED4D005CDC8B /* Assets.xcassets in Resources */,
 				717E053E1BFAED4D005CDC8B /* Main.storyboard in Resources */,
 			);

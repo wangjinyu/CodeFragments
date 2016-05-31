@@ -50,6 +50,9 @@
         [[NetworkManager defaultManager] startNotifierNetworkChanged];
     }    
     if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)  {
+        // 释放资源
+        CFRelease(reachability);
+        reachability = NULL;
         return kNetWorkInvalid;
     }
     
@@ -68,6 +71,11 @@
     if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN){
         retVal = kNetWorkWWAN;
     }
+    
+    // 释放资源
+    CFRelease(reachability);
+    reachability = NULL;
+
     return retVal;
 }
 
@@ -84,7 +92,12 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     zeroAddress.sin_len = sizeof(zeroAddress);
     zeroAddress.sin_family = AF_INET;
     
-    self.defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(nil, (struct sockaddr *)&zeroAddress);
+    // 释放内存
+    if (self.defaultRouteReachability) {
+        CFRelease(self.defaultRouteReachability);
+        self.defaultRouteReachability = NULL;
+    }
+    _defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(nil, (struct sockaddr *)&zeroAddress);
     SCNetworkReachabilityContext context = {0, (__bridge void*)self, NULL, NULL, NULL};
     
     if(SCNetworkReachabilitySetCallback(self.defaultRouteReachability, ReachabilityCallback, &context)){
@@ -96,7 +109,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
         }else{
             return YES;
         }
-    }    
+    }   
     SCNetworkReachabilitySetCallback(self.defaultRouteReachability, NULL, NULL);
     return NO;
 }

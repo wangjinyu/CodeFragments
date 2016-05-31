@@ -34,6 +34,20 @@
  */
 - (UIColor *)colorAtPixel:(CGPoint)point;
 
+
+
+
+#pragma mark - 图片模糊的方法
+
+/*!
+ @author 王金宇, 16-05-31 10:05:58
+ 
+ @brief 亮色的 blur image
+ 
+ @return blur image
+ 
+ @since 3.0
+ */
 - (UIImage *)applyLightEffect;
 - (UIImage *)applyExtraLightEffect;
 - (UIImage *)applyDarkEffect;
